@@ -1,0 +1,25 @@
+{
+  "name": "eslint-plugin-jsx-extras",
+  "version": "1.0.0",
+  "description": "A set of eslint rules to do custom JSX checks",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "eslint": ">=0.8.0",
+    "babel-eslint": "*",
+    "eslint-plugin-react": "*"
+  },
+  "author": "Naman Goel",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "babel-eslint": "^4.0.5"
+  }
+}
