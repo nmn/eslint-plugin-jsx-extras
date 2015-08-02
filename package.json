@@ -18,6 +18,10 @@
   },
   "author": "Naman Goel",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmn/eslint-plugin-jsx-extras.git"
+  },
   "devDependencies": {
     "babel": "^5.8.20",
     "babel-eslint": "^4.0.5"
