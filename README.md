@@ -9,6 +9,24 @@ Currently this package has a single rule which is being used for the upclose.me 
 This rule disallows the use of string literals (other than numbers) in a JSX expression.
 It exists so that a developer doesn't accidentally forget to put localized strings for a component.
 
+#### no-untyped-react-exports
+This rule is for using ES6 classes with flowtypes.
+It warns you if you are exporting a React ES6 class while passing it through a function:
+```
+export default autobind(MyReactClass)
+```
+This will work fine:
+```
+const toExport = autobind(MyReactClass)
+export default toExport
+```
+As such this rule isn't perfect. You should be annotating the type for `toExport`:
+```
+const toExport: typeof MyReactClass = autobind(MyReactClass)
+export default toExport
+```
+
+
 ## Future
 Some rules that I'm currently working on:
 1) multiline-attributes-align: To check that JSX attributes are either limited to a single line or the attributes all match the same indentation.
