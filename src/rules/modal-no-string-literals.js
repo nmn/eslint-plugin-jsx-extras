@@ -19,7 +19,7 @@ export default function(context: Context): Rules {
         && node.callee.object.type === 'Identifier'
         && node.callee.object.name === 'ee'
         && node.callee.property.type === 'Identifier'
-        && node.callee.proper.name == 'emit')){
+        && node.callee.property.name == 'emit')){
         return
       }
       if(node.arguments.length !== 2){
